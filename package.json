@@ -27,7 +27,7 @@
   },
   "scripts": {
     "build": "vite build",
-    "build:css": "sass ./app/assets/stylesheets/index.scss:./app/assets/builds/application.css --no-source-map --load-path=node_modules"
+    "build:css": ""
   },
   "devDependencies": {
     "vite": "^4.3.0",
