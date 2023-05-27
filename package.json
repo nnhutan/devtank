@@ -26,8 +26,7 @@
     "vite-plugin-stimulus-hmr": "^3.0.0"
   },
   "scripts": {
-    "build": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds --public-path=assets",
-    "build:css": "sass ./app/assets/stylesheets/index.scss:./app/assets/builds/application.css --no-source-map --load-path=node_modules"
+    "build": "vite build"
   },
   "devDependencies": {
     "vite": "^4.3.0",
