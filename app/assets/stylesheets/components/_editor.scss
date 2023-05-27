@@ -1,0 +1,8 @@
+.codex-editor {
+  .ce-paragraph[data-placeholder]:empty::before {
+    color: #707684;
+    font-weight: 300;
+    opacity: 0;
+    font-size: 18px;
+  }
+}

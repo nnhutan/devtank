@@ -1,0 +1,26 @@
+%header
+  %nav.navbar.navbar-dark.navbar-expand-lg.bg-body-tertiary.sticky-top{'data-bs-theme': :dark}
+    .container
+      = link_to root_path, class: 'navbar-brand fw-bolder d-flex gap-0' do
+        %span.text-light Dev
+        %span.text-dark Tank
+      %button.navbar-toggler{
+        aria: {controls: 'navbar-nav', expanded: false, label: 'Toggle navigation'},
+        data: {'bs-target': '#navbar-nav', 'bs-toggle': :collapse}}
+        %span.navbar-toggler-icon
+      .collapse.navbar-collapse#navbar-nav
+        %ul.navbar-nav
+          %li.nav-item
+            = link_to 'Home', root_path, class: "nav-link #{current_page?(root_path) && 'active'}", aria: {current: 'page'}
+          %li.nav-item
+            = link_to 'Editor', editor_index_path, class: "nav-link #{current_page?(editor_index_path) && 'active'}"
+        %ul.navbar-nav.ms-auto.d-flex.flex-row.gap-2
+          %li.nav-item
+            %a.nav-link{href: 'https:github.com/nnhutan', target: :_blank}
+              %i.bi.bi-github{type: :button}
+          %li.nav-item
+            %a.nav-link{href: 'https:facebook.com/dinhnhutan', target: :_blank}
+              %i.bi.bi-facebook
+          %li.nav-item
+            .nav-link
+              %i.bi.bi-linkedin
