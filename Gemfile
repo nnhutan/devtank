@@ -78,6 +78,11 @@ group :test do
 end
 
 gem 'devise', '~> 4.9'
+gem 'omniauth-facebook'
+gem 'omniauth-github', '~> 2.0.0'
+gem 'omniauth-google-oauth2'
+gem 'omniauth-rails_csrf_protection'
 gem 'simple_form'
 
-gem "byebug", "~> 11.1", :groups => [:development, :test]
+gem 'byebug', '~> 11.1', groups: %i[development test]
+gem 'rack-cors'

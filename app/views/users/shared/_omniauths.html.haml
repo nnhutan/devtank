@@ -1,0 +1,7 @@
+.d-flex.mt-2.justify-content-center
+  = button_to user_github_omniauth_authorize_path, data: { turbo: false }, class: 'btn btn-link link-dark' do
+    %i.bi.bi-github.fs-4
+  = button_to user_facebook_omniauth_authorize_path, data: { turbo: false }, class: 'btn btn-link link-dark' do
+    %i.bi.bi-facebook.fs-4{style: 'color: #1a77f2;'}
+  = button_to user_google_oauth2_omniauth_authorize_path, data: { turbo: false }, class: 'btn btn-link link-dark' do
+    %i.bi.bi-google.fs-4{style: 'color: #ea4335;'}
