@@ -76,3 +76,8 @@ group :test do
   gem 'selenium-webdriver'
   gem 'webdrivers'
 end
+
+gem 'devise', '~> 4.9'
+gem 'simple_form'
+
+gem "byebug", "~> 11.1", :groups => [:development, :test]

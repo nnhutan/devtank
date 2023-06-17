@@ -1,5 +1,5 @@
 %header
-  %nav.navbar.navbar-dark.navbar-expand-lg.bg-body-tertiary.sticky-top{'data-bs-theme': :dark}
+  %nav.navbar.navbar-dark.navbar-expand-lg.bg-body-tertiary.sticky-top{'data-bs-theme': :dark, style: "--bs-bg-opacity: 0;"}
     .container
       = link_to root_path, class: 'navbar-brand fw-bolder d-flex gap-0' do
         %span.text-light Dev
@@ -15,6 +15,9 @@
           %li.nav-item
             = link_to 'Editor', editor_index_path, class: "nav-link #{current_page?(editor_index_path) && 'active'}"
         %ul.navbar-nav.ms-auto.d-flex.flex-row.gap-2
+          - if user_signed_in?
+            %li.nav-item.text-light.d-flex.align-items-center
+              %span Hello, #{current_user.full_name}
           %li.nav-item
             %a.nav-link{href: 'https://github.com/nnhutan', target: :_blank}
               %i.bi.bi-github{type: :button}
@@ -22,5 +25,14 @@
             %a.nav-link{href: 'https://facebook.com/dinhnhutan', target: :_blank}
               %i.bi.bi-facebook
           %li.nav-item
-            .nav-link
+            %a.nav-link{href: 'https://linkedin.com/in/dinhnhutan', target: :_blank}
               %i.bi.bi-linkedin
+          - if user_signed_in?
+            %li.nav-item
+              = button_to destroy_user_session_path, method: :delete, class: 'nav-link' do
+                %i.bi.bi-box-arrow-right
+          - else
+            %li.nav-item
+              = link_to 'Sign in', new_user_session_path, class: "nav-link #{current_page?(new_user_session_path) && 'active'}"
+            %li.nav-item
+              = link_to 'Sign up', new_user_registration_path, class: "nav-link #{current_page?(new_user_registration_path) && 'active'}"

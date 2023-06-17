@@ -1,0 +1,10 @@
+.card.p-3.m-auto.mt-5.pb-4{style: 'width: 30rem;'}
+  %h1.text-center.text-dark.fw-bolder Sign up
+  = simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+    = f.input :full_name, autofocus: true, required: true
+    = f.input :email, autofocus: true, autocomplete: :email, required: true
+    = f.input :password, autocomplete: 'new-password', hint: "#{@minimum_password_length} characters minimum", required: true
+    = f.input :password_confirmation, autocomplete: 'new-password', required: true
+    = f.button :submit, 'Sign up', class: 'btn btn-dark d-block m-auto w-75'
+    .text-center.mt-3
+      = link_to 'Log in', new_session_path(resource_name), class: 'link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover'
