@@ -1,0 +1,39 @@
+.page-title {
+  padding-bottom: 4.5rem !important;
+  background: $header-bg-color;
+  background: radial-gradient(
+    circle,
+    $header-bg-color 0%,
+    rgba(2, 0, 36, 1) 100%
+  );
+
+  .breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+    list-style: none;
+    background-color: $bg-color;
+    border-radius: 0.375rem;
+    padding: 0.5rem 1rem;
+
+    .breadcrumb-item {
+      font-weight: 600;
+      font-size: 0.875rem;
+
+      + .breadcrumb-item {
+        padding-left: 0.5rem;
+
+        &:before {
+          float: left;
+          padding-right: 0.5rem;
+          color: $secondary-color;
+          content: "•";
+        }
+      }
+
+      &.active {
+        color: $secondary-color;
+      }
+    }
+  }
+}

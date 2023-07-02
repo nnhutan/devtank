@@ -1,2 +1,3 @@
 vite: bin/vite dev
-web: unset PORT && rm -f tmp/pids/server.pid && bin/rails server
+
+web: lsof -i :3000 | awk 'NR!=1 {print $2}' | xargs kill && rm -f tmp/pids/server.pid && bin/rails server -p 3000

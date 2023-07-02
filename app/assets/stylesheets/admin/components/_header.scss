@@ -1,0 +1,37 @@
+.header {
+  // background-color: $header-bg-color;
+  background: $header-bg-color;
+  background: radial-gradient(
+    circle,
+    $header-bg-color 0%,
+    rgba(2, 0, 36, 1) 100%
+  );
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+
+  .search-input {
+    max-width: 380px;
+    .input-group {
+      height: 46px;
+      border-radius: 30px;
+      .input-group-text {
+        border-radius: 30px;
+        background-color: $bg-color;
+        border: none;
+      }
+      .form-control {
+        border-radius: 30px;
+        border: none;
+        box-shadow: none;
+        background-color: $bg-color;
+        &:focus {
+          box-shadow: none;
+        }
+      }
+    }
+  }
+  .dropdown-toggle {
+    &::after {
+      border-top-color: #fff;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+en:
+  pagy:
+    item_name:
+      one: "item"
+      other: "items"
+
+    nav:
+      prev: "<i class='bi bi-chevron-left'></i>"
+      next: "<i class='bi bi-chevron-right'></i>"
+      gap: "&hellip;"
+
+    info:
+      no_items: "No %{item_name} found"
+      single_page: "Showing %{count} %{item_name}"
+      multiple_pages: "Showing %{item_name} <b>%{from}</b> to <b>%{to}</b> of <b>%{count}</b> in total"
+
+    combo_nav_js: "<label>Page %{page_input} of %{pages}</label>"
+
+    items_selector_js: "<label>Show %{items_input} %{item_name} per page</label>"

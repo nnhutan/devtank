@@ -1,0 +1,11 @@
+default: &default
+  toolbar: styleselect | bold italic | undo redo | table
+  plugins:
+    - image
+    - link
+
+alternate:
+  <<: *default
+  toolbar: styleselect | bold italic | undo redo | table
+  plugins:
+    - table

@@ -8,11 +8,12 @@
     = csrf_meta_tags
     = csp_meta_tag
     = vite_client_tag
-    = vite_javascript_tag :application, 'data-turbo-track': :reload, defer: true
-    = tinymce_assets
+    = vite_javascript_tag :admin, 'data-turbo-track': :reload, defer: true
   %body
-    = render 'shared/header'
     .position-relative#flash{'aria-live': :polite, 'aria-atomic': true}= render 'shared/flash'
+    = render 'shared/admin/sidebar'
     .content
-      .container
+      = render 'shared/admin/header'
+      = yield :page_title
+      .main-content.container-fluid
         = yield

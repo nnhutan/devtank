@@ -1,0 +1,55 @@
+@import "admin/colors";
+@import "admin/components/sidebar";
+@import "admin/components/header";
+@import "admin/components/page_title";
+@import "admin/components/table";
+@import "admin/components/pagination";
+
+@import "~bootstrap/scss/bootstrap";
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap");
+
+body {
+  background-color: $bg-color;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+  font-family: "Inter", sans-serif;
+  font-family: "Open Sans", sans-serif;
+}
+
+html {
+  height: 100vh;
+  height: -webkit-fill-available;
+}
+
+@media (min-width: 1200px) {
+  .g-sidenav-pinned.sidebar + .content {
+    margin-left: 250px;
+  }
+}
+.content {
+  margin-left: 80px;
+
+  .page-title {
+    + .main-content {
+      margin-top: -4.5rem !important;
+    }
+  }
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+}
+
+.card-header {
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 0;
+  background-color: #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.card {
+  -webkit-box-shadow: 0 0 2rem 0 rgba(136, 152, 170, 0.15);
+  box-shadow: 0 0 2rem 0 rgba(136, 152, 170, 0.15);
+}

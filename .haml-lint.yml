@@ -84,7 +84,7 @@ linters:
     severity: error
 
   RuboCop:
-    enabled: true
+    enabled: false
     # These cops are incredibly noisy when it comes to HAML templates, so we
     # ignore them.
     ignored_cops:

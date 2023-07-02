@@ -57,6 +57,7 @@ gem 'bootsnap', require: false
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri mingw x64_mingw]
+  gem 'faker'
 end
 
 group :development do
@@ -85,4 +86,7 @@ gem 'omniauth-rails_csrf_protection'
 gem 'simple_form'
 
 gem 'byebug', '~> 11.1', groups: %i[development test]
+gem 'pagy', '~> 6.0' # omit patch digit
+gem 'pundit', '~> 2.3'
 gem 'rack-cors'
+gem 'tinymce-rails'

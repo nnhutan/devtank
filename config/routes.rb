@@ -5,4 +5,10 @@ Rails.application.routes.draw do
 
   root 'home#index'
   resources :editor, only: [:index]
+
+  scope module: 'admin', as: 'admin' do
+    constraints subdomain: 'admin' do
+      resources :users, only: [:index]
+    end
+  end
 end

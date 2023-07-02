@@ -1,0 +1,33 @@
+= page_title do |p|
+  = p.info do
+    = p.title 'All users'
+    = p.breadcrumb do
+      = p.breadcrumb_item '', path: root_path, icon: 'house-fill'
+      = p.breadcrumb_item 'All users'
+  = p.actions do
+    %button.btn.btn-light.btn-sm{type: :button, 'data-bs-toggle': :modal, 'data-bs-target': '#new-table-modal'} New user
+.container-fluid
+  .card.border-0
+    .card-header
+      All users
+    .card-body
+      %table.table.devtank-table
+        %thead
+          %tr
+            %th #
+            %th Full name
+            %th Email
+            %th Created at
+            %th Updated at
+            %th Actions
+        %tbody
+          - @users.each do |user|
+            %tr
+              %td= user.id
+              %td= user.full_name
+              %td= user.email
+              %td= user.created_at.to_s(:ymd)
+              %td= user.updated_at.to_s(:ymd)
+              %td Action
+    .card-footer.bg-white.border-0.pb-4
+      = render_pagination @pagy
