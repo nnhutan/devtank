@@ -1,0 +1,27 @@
+= page_title do |_p|
+  .d-flex.justify-content-between.align-items-center
+    .info.d-flex.justify-content-start.align-items-center.gap-3
+      = image_tag(@user.avatar_thumbnail, class: 'rounded-circle avatar', alt: 'avatar')
+      .bio
+        %h1.text-white= @user.full_name
+        %p.text-light.font-monospace.ms-2.w-75 Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.
+    .socials.d-flex.justify-content-start.align-items-center.gap-3
+      %a.btn.btn-outline-light.btn-lg{ href: '#' }
+        %i.bi.bi-facebook
+      %a.btn.btn-outline-light.btn-lg{ href: '#' }
+        %i.bi.bi-twitter
+      %a.btn.btn-outline-light.btn-lg{ href: '#' }
+        %i.bi.bi-instagram
+      %a.btn.btn-outline-light.btn-lg{ href: '#' }
+        %i.bi.bi-linkedin
+.row
+  .col-md-6
+    .card.border-0{ style: 'height: 500px;' }
+      .card-body
+        .d-flex.justify-content-center
+          Some content
+  .col-md-6
+    .card.border-0{ style: 'height: 500px;' }
+      .card-body
+        .d-flex.justify-content-center
+          Some content

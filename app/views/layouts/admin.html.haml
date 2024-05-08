@@ -4,7 +4,7 @@
     %meta{content: 'text/html; charset=UTF-8', 'http-equiv': 'Content-Type'}/
     %title DevTank
     %meta{content: 'width=device-width,initial-scale=1', name: 'viewport'}/
-    = favicon_link_tag vite_asset_url('icon.png')
+    = favicon_link_tag vite_asset_url('images/icon.png')
     = csrf_meta_tags
     = csp_meta_tag
     = vite_client_tag
@@ -15,5 +15,5 @@
     .content
       = render 'shared/admin/header'
       = yield :page_title
-      .main-content.container-fluid
+      .main-content.container-fluid.pb-5
         = yield

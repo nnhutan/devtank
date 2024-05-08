@@ -8,7 +8,7 @@
           %input.form-control{type: "text", placeholder: "Search..."}
     .flex-shrink-0.dropdown
       %a.d-block.link-body-emphasis.text-decoration-none.dropdown-toggle{"aria-expanded" => "false", "data-bs-toggle" => "dropdown", href: "#"}
-        %img.rounded-circle{alt: "mdo", height: "32", src: "https://github.com/mdo.png", width: "32"}/
+        = image_tag current_user.avatar_thumbnail, class: 'rounded-circle', height: '32', width: '32'
       %ul.dropdown-menu.text-small.shadow
         %li
           %a.dropdown-item{href: "#"} New project...

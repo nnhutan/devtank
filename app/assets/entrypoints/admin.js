@@ -34,4 +34,9 @@ import "@hotwired/turbo-rails";
 import * as bootstrap from "bootstrap";
 import "../vendors/pagy";
 
+import "filepond/dist/filepond.min.css";
+// import "filepond-plugin-file-poster/dist/filepond-plugin-file-poster.css";
+import "filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css";
+// import "@pqina/pintura/pintura.css";
+
 import "@assets/stylesheets/admin.scss";

@@ -1,7 +1,7 @@
 .sidebar.d-flex.flex-column.flex-shrink-0.g-sidenav-pinned{ data: { controller: 'components--admin--sidebar' } }
   .sidebar-brand.d-flex.align-items-center
     %a.sidebar-logo.d-flex.align-items-center.text-decoration-none.p-4{href: "/"}
-      %img.rounded-circle.me-3.mb-2{alt: "", height: "32", src: vite_asset_url('icon.png'), width: "32"}/
+      = vite_image_tag('images/icon.png', class: 'me-2 rounded-circle mb-2', alt: 'logo', width: 32, height: 32)
       %span.fs-5.text-dark.font-monospace DevTank
     .ms-auto
       .sidenav-toggler.p-4.active{ data: { action: 'click->components--admin--sidebar#toggle',
@@ -12,7 +12,7 @@
           %i.sidenav-toggler-line
   %ul.nav.flex-column.mb-auto
     %li.nav-item
-      = menu_item :Home, '/', icon: :house, icon_color: '#5372e4', icon_class: 'fs-6 me-4'
+      = menu_item :Home, admin_root_path, icon: :house, icon_color: '#5372e4', icon_class: 'fs-6 me-4'
     %li.nav-item
       = menu_item :Users, admin_users_path, icon: :people, icon_color: '#fb6340', icon_class: 'fs-6 me-4'
-  %hr/
+  -# %hr/
